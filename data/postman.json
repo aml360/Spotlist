@@ -1,0 +1,162 @@
+{
+	"info": { "name": "SpotList", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json" },
+	"item": [
+		{
+			"name": "addSongToList",
+			"request": {
+				"method": "POST",
+				"url": {
+					"raw": "http://localhost:3000/users/35806c7f-980c-4e77-afd5-1be01002ab6c/lists/1/songs",
+					"protocol": "http",
+					"host": ["localhost:3000"],
+					"path": ["users", "35806c7f-980c-4e77-afd5-1be01002ab6c", "lists", "1", "songs"],
+					"port": "3000"
+				},
+				"header": [
+					{ "key": "Accept", "value": "*/*" },
+					{ "key": "User-Agent", "value": "Thunder Client (https://www.thunderclient.com)" }
+				],
+				"body": {
+					"mode": "raw",
+					"options": { "raw": { "language": "json" } },
+					"raw": "{\n    \"title\": \"Pressure\",\n    \"artist\": \"Draper\"\n}"
+				},
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM1ODA2YzdmLTk4MGMtNGU3Ny1hZmQ1LTFiZTAxMDAyYWI2YyJ9.GRLTw4LwJLON4UQ9b6VJLJT17Xl-6XCKMg9m66l2GEE",
+							"type": "string"
+						}
+					]
+				}
+			}
+		},
+		{
+			"name": "getListsOfUser",
+			"request": {
+				"method": "GET",
+				"url": {
+					"raw": "localhost:3000/users/35806c7f-980c-4e77-afd5-1be01002ab6c/lists",
+					"host": ["localhost:3000"],
+					"path": ["users", "35806c7f-980c-4e77-afd5-1be01002ab6c", "lists"],
+					"port": "3000"
+				},
+				"header": [
+					{ "key": "Accept", "value": "*/*" },
+					{ "key": "User-Agent", "value": "Thunder Client (https://www.thunderclient.com)" }
+				],
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM1ODA2YzdmLTk4MGMtNGU3Ny1hZmQ1LTFiZTAxMDAyYWI2YyJ9.GRLTw4LwJLON4UQ9b6VJLJT17Xl-6XCKMg9m66l2GEE",
+							"type": "string"
+						}
+					]
+				}
+			}
+		},
+		{
+			"name": "getListOfUser",
+			"request": {
+				"method": "GET",
+				"url": {
+					"raw": "localhost:3000/users/35806c7f-980c-4e77-afd5-1be01002ab6c/lists/1",
+					"host": ["localhost:3000"],
+					"path": ["users", "35806c7f-980c-4e77-afd5-1be01002ab6c", "lists", "1"],
+					"port": "3000"
+				},
+				"header": [
+					{ "key": "Accept", "value": "*/*" },
+					{ "key": "User-Agent", "value": "Thunder Client (https://www.thunderclient.com)" }
+				],
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCdI6IjM1ODA2YzdmLTk4MGMtNGU3Ny1hZmQ1LTFiZTAxMDAyYWI2YyJ9.GRLTw4LwJLON4UQ9b6VJLJT17Xl-6XCKMg9m66l2GEE",
+							"type": "string"
+						}
+					]
+				}
+			}
+		},
+		{
+			"name": "addListToUser",
+			"request": {
+				"method": "POST",
+				"url": {
+					"raw": "localhost:3000/users/35806c7f-980c-4e77-afd5-1be01002ab6c/lists",
+					"host": ["localhost:3000"],
+					"path": ["users", "35806c7f-980c-4e77-afd5-1be01002ab6c", "lists"],
+					"port": "3000"
+				},
+				"header": [
+					{ "key": "Accept", "value": "*/*" },
+					{ "key": "User-Agent", "value": "Thunder Client (https://www.thunderclient.com)" }
+				],
+				"body": {
+					"mode": "raw",
+					"options": { "raw": { "language": "json" } },
+					"raw": "{\n  \"name\": \"Rap\",\n  \"songs\": [\n    {\n      \"title\": \"Vivir para Contarlo\",\n      \"artist\": \"Violadores Del Verso\"\n    },\n    {\n      \"title\": \"Mazas y Catapultas\",\n      \"artist\": \"Kase.O\"\n    }\n  ]\n}"
+				},
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM1ODA2YzdmLTk4MGMtNGU3Ny1hZmQ1LTFiZTAxMDAyYWI2YyJ9.GRLTw4LwJLON4UQ9b6VJLJT17Xl-6XCKMg9m66l2GEE",
+							"type": "string"
+						}
+					]
+				}
+			}
+		},
+		{
+			"name": "signin",
+			"request": {
+				"method": "GET",
+				"url": {
+					"raw": "localhost:3000/auth/signin",
+					"host": ["localhost:3000"],
+					"path": ["auth", "signin"],
+					"port": "3000"
+				},
+				"header": [
+					{ "key": "Accept", "value": "*/*" },
+					{ "key": "User-Agent", "value": "Thunder Client (https://www.thunderclient.com)" }
+				],
+				"body": {
+					"mode": "raw",
+					"options": { "raw": { "language": "json" } },
+					"raw": "{\n    \"name\": \"Adrian Molina\",\n    \"password\": \"aml360\"\n}"
+				}
+			}
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"url": {
+					"raw": "localhost:3000/auth/register",
+					"host": ["localhost:3000"],
+					"path": ["auth", "register"],
+					"port": "3000"
+				},
+				"header": [
+					{ "key": "Accept", "value": "*/*" },
+					{ "key": "User-Agent", "value": "Thunder Client (https://www.thunderclient.com)" }
+				],
+				"body": {
+					"mode": "raw",
+					"options": { "raw": { "language": "json" } },
+					"raw": "{\n  \"name\": \"Adrian Molina\",\n  \"password\": \"aml360\"\n}"
+				}
+			}
+		}
+	]
+}

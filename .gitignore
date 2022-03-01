@@ -1,7 +1,9 @@
-*/node_modules
+**/node_modules
 dist
 /.idea/
 /ts-express-mocha/cypress/*
 !/ts-express-mocha/cypress/integration
 !/ts-express-mocha/cypress/tsconfig.json
 /**/cypress.xml
+.vscode/settings.json
+pnpm-lock.yaml

@@ -1,0 +1,139 @@
+{
+	"client": "Thunder Client",
+	"collectionName": "SpotList",
+	"dateExported": "2022-03-01T10:23:35.255Z",
+	"version": "1.1",
+	"folders": [],
+	"requests": [
+		{
+			"containerId": "",
+			"sortNum": 10000,
+			"headers": [
+				{ "name": "Accept", "value": "*/*" },
+				{ "name": "User-Agent", "value": "Thunder Client (https://www.thunderclient.com)" }
+			],
+			"colId": "72bc7534-107a-49c4-8d0a-5748ccc36fee",
+			"name": "addSongToList",
+			"url": "http://localhost:3000/users/35806c7f-980c-4e77-afd5-1be01002ab6c/lists/1/songs",
+			"method": "POST",
+			"modified": "2022-03-01T10:19:42.844Z",
+			"created": "2022-03-01T10:03:42.322Z",
+			"_id": "847b0143-3731-42da-8a60-77755ab96bc4",
+			"params": [],
+			"body": { "type": "json", "raw": "{\n    \"title\": \"Pressure\",\n    \"artist\": \"Draper\"\n}", "form": [] },
+			"auth": {
+				"type": "bearer",
+				"bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM1ODA2YzdmLTk4MGMtNGU3Ny1hZmQ1LTFiZTAxMDAyYWI2YyJ9.GRLTw4LwJLON4UQ9b6VJLJT17Xl-6XCKMg9m66l2GEE"
+			},
+			"tests": []
+		},
+		{
+			"containerId": "",
+			"sortNum": 20000,
+			"headers": [
+				{ "name": "Accept", "value": "*/*" },
+				{ "name": "User-Agent", "value": "Thunder Client (https://www.thunderclient.com)" }
+			],
+			"colId": "72bc7534-107a-49c4-8d0a-5748ccc36fee",
+			"name": "getListsOfUser",
+			"url": "localhost:3000/users/35806c7f-980c-4e77-afd5-1be01002ab6c/lists",
+			"method": "GET",
+			"modified": "2022-03-01T10:20:09.716Z",
+			"created": "2022-03-01T10:12:17.806Z",
+			"_id": "96d14830-a785-4bbd-8545-ad45bd3bc649",
+			"params": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM1ODA2YzdmLTk4MGMtNGU3Ny1hZmQ1LTFiZTAxMDAyYWI2YyJ9.GRLTw4LwJLON4UQ9b6VJLJT17Xl-6XCKMg9m66l2GEE"
+			},
+			"tests": []
+		},
+		{
+			"containerId": "",
+			"sortNum": 30000,
+			"headers": [
+				{ "name": "Accept", "value": "*/*" },
+				{ "name": "User-Agent", "value": "Thunder Client (https://www.thunderclient.com)" }
+			],
+			"colId": "72bc7534-107a-49c4-8d0a-5748ccc36fee",
+			"name": "getListOfUser",
+			"url": "localhost:3000/users/35806c7f-980c-4e77-afd5-1be01002ab6c/lists/1",
+			"method": "GET",
+			"modified": "2022-03-01T10:20:25.670Z",
+			"created": "2022-03-01T03:07:18.029Z",
+			"_id": "2d91aa1c-803e-40ff-b39d-6976852f43d9",
+			"params": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCdI6IjM1ODA2YzdmLTk4MGMtNGU3Ny1hZmQ1LTFiZTAxMDAyYWI2YyJ9.GRLTw4LwJLON4UQ9b6VJLJT17Xl-6XCKMg9m66l2GEE"
+			},
+			"tests": []
+		},
+		{
+			"containerId": "",
+			"sortNum": 40000,
+			"headers": [
+				{ "name": "Accept", "value": "*/*" },
+				{ "name": "User-Agent", "value": "Thunder Client (https://www.thunderclient.com)" }
+			],
+			"colId": "72bc7534-107a-49c4-8d0a-5748ccc36fee",
+			"name": "addListToUser",
+			"url": "localhost:3000/users/35806c7f-980c-4e77-afd5-1be01002ab6c/lists",
+			"method": "POST",
+			"modified": "2022-03-01T10:20:29.254Z",
+			"created": "2022-03-01T09:01:48.379Z",
+			"_id": "0a701461-f664-4db4-a52a-6c6c7dbea337",
+			"params": [],
+			"body": {
+				"type": "json",
+				"raw": "{\n  \"name\": \"Rap\",\n  \"songs\": [\n    {\n      \"title\": \"Vivir para Contarlo\",\n      \"artist\": \"Violadores Del Verso\"\n    },\n    {\n      \"title\": \"Mazas y Catapultas\",\n      \"artist\": \"Kase.O\"\n    }\n  ]\n}",
+				"form": []
+			},
+			"auth": {
+				"type": "bearer",
+				"bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM1ODA2YzdmLTk4MGMtNGU3Ny1hZmQ1LTFiZTAxMDAyYWI2YyJ9.GRLTw4LwJLON4UQ9b6VJLJT17Xl-6XCKMg9m66l2GEE"
+			},
+			"tests": []
+		},
+		{
+			"containerId": "",
+			"sortNum": 50000,
+			"headers": [
+				{ "name": "Accept", "value": "*/*" },
+				{ "name": "User-Agent", "value": "Thunder Client (https://www.thunderclient.com)" }
+			],
+			"colId": "72bc7534-107a-49c4-8d0a-5748ccc36fee",
+			"name": "signin",
+			"url": "localhost:3000/auth/signin",
+			"method": "GET",
+			"modified": "2022-03-01T10:20:33.172Z",
+			"created": "2022-03-01T08:26:22.312Z",
+			"_id": "d8c7e2e9-a0e2-4888-bc07-6ae08db1d017",
+			"params": [],
+			"body": {
+				"type": "json",
+				"raw": "{\n    \"name\": \"Adrian Molina\",\n    \"password\": \"aml360\"\n}",
+				"form": []
+			},
+			"tests": []
+		},
+		{
+			"containerId": "",
+			"sortNum": 60000,
+			"headers": [
+				{ "name": "Accept", "value": "*/*" },
+				{ "name": "User-Agent", "value": "Thunder Client (https://www.thunderclient.com)" }
+			],
+			"colId": "72bc7534-107a-49c4-8d0a-5748ccc36fee",
+			"name": "register",
+			"url": "localhost:3000/auth/register",
+			"method": "POST",
+			"modified": "2022-03-01T10:20:36.462Z",
+			"created": "2022-02-24T02:58:42.303Z",
+			"_id": "2dfaf700-39bf-49e0-9154-7a3cadd916ac",
+			"params": [],
+			"body": { "type": "json", "raw": "{\n  \"name\": \"Adrian Molina\",\n  \"password\": \"aml360\"\n}", "form": [] },
+			"tests": []
+		}
+	]
+}
