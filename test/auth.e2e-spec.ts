@@ -4,6 +4,9 @@ import * as request from 'supertest';
 import { AppTestingModule } from 'src/app.module';
 import { RegisterDTO, SignInDTO } from 'src/dto/auth.dto';
 import { TestingDatabaseModule } from 'src/modules/database/database.module';
+import { getConnection } from 'typeorm';
+import { User } from 'src/entity';
+import { hashSync } from '@node-rs/bcrypt';
 
 describe('Auth controller (e2e)', () => {
 	let app: INestApplication;
@@ -28,12 +31,15 @@ describe('Auth controller (e2e)', () => {
 			imports: [AppTestingModule, TestingDatabaseModule],
 		}).compile();
 
+		const entityManager = getConnection().createEntityManager();
+
+		await entityManager.insert<User>(User, {
+			name: data.userRegistered.name,
+			password: hashSync(data.userRegistered.password),
+		});
+
 		app = moduleFixture.createNestApplication();
 		await app.init();
-
-		// TODO: Change this and use typeorm repository for adding data to database
-		// I do this because I know that endpoints works but this won't in early development stages or if a developer changes the endpoint function invalidating it.
-		await request(app.getHttpServer()).post('/auth/register').send(data.userRegistered);
 	});
 
 	afterAll(async () => {
