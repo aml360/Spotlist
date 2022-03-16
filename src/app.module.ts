@@ -11,3 +11,14 @@ import { AuthModule } from './modules/auth/auth.module';
 	providers: [AppService],
 })
 export class AppModule {}
+
+/**
+ * App module without the database module.
+ * Use only for testing
+ */
+@Module({
+	imports: [UsersModule, AuthModule],
+	controllers: [AppController],
+	providers: [AppService],
+})
+export class AppTestingModule {}
