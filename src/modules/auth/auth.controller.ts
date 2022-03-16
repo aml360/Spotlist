@@ -37,7 +37,7 @@ export class AuthController {
 		if (isUserRegistered) {
 			throw new BadRequestException(`user with ${registerDto.name} is already registered`);
 		}
-		this.authSv.registerUser(registerDto);
+		await this.authSv.registerUser(registerDto);
 		return true;
 	}
 }

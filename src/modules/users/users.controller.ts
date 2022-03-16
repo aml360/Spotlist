@@ -35,8 +35,8 @@ export class UsersController {
 		@Headers('Authorization') token: string | undefined,
 	): Promise<SongListGetDTO> {
 		await this.commonValidations(token, userId);
-		await this.usrSv.addListToUser(userId, listDto);
-		return {} as SongListGetDTO;
+		// TODO: Change DTO or method because this return the list with the songs but also with the user asocciated
+		return this.usrSv.addListToUser(userId, listDto) as unknown as SongListGetDTO;
 	}
 
 	@Get(':userId/lists')
@@ -72,7 +72,11 @@ export class UsersController {
 	): Promise<SongDTO> {
 		await this.commonValidations(token, userId);
 
-		this.songListSv.addSongToList(listId, song);
+		if(!await this.songListSv.existList(listId)){
+			throw new BadRequestException(`SongList with id ${listId} does not exist`)
+		}
+
+		await this.songListSv.addSongToList(listId, song);
 		return song; // This is not correct, but I am just implementing the swagger documentation provided by rviewer.
 	}
 
