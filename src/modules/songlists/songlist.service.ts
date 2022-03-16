@@ -28,7 +28,7 @@ export class SongListService {
 	 * @param list The songList without user and id
 	 * @returns The songList entity created on db with the id
 	 */
-	create(list: SongList) {
+	create(list: SongList): Promise<SongList> {
 		return this.songListRepo.save(list);
 	}
 

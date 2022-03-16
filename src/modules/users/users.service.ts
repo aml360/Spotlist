@@ -87,7 +87,7 @@ export class UsersService {
 	 * @param userId
 	 * @param list
 	 */
-	async addListToUser(userId: string, list: SongListPostDTO): Promise<void>;
+	async addListToUser(userId: string, list: SongListPostDTO): Promise<SongList>;
 	/**
 	 * ADD a {@link SongList} to a {@link User}, the Songlist and the user must exist on database.
 	 * @param userId
@@ -95,7 +95,7 @@ export class UsersService {
 	 * @throws
 	 */
 	async addListToUser(userId: string, list: SongList['listId']): Promise<void>;
-	async addListToUser(userId: string, list: SongListPostDTO | SongList['listId']): Promise<void> {
+	async addListToUser(userId: string, list: SongListPostDTO | SongList['listId']): Promise<void | SongList> {
 		const userDbPromise = this.usrRepo.findOne(userId, {
 			join: { alias: 'user', leftJoinAndSelect: { songLists: 'user.songLists' } },
 		});
@@ -119,7 +119,7 @@ export class UsersService {
 			const listToSave = cloneDeep(list) as SongList;
 			listToSave.user = userDb;
 			await this.songRepo.save(listToSave.songs as Song[]);
-			const listDb = await this.songListSv.create(listToSave);
+			return this.songListSv.create(listToSave);
 		}
 	}
 
